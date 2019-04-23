@@ -32,7 +32,6 @@ function PetFinderService($http, $q) {
                     }
                 })
                 .then( (response) => {
-                    console.log(response);
                     resolve(response.data.animals);
                 })
                 .catch( (err) => {

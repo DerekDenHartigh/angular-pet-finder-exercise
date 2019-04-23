@@ -2,15 +2,26 @@
 
 function PetFinderController(PetFinderService) {  
     const ctrl = this;
+
+    ctrl.petList =[];
+
+    ctrl.fillPetList = ()=>{
+        PetFinderService.getData().then((data)=>{
+            ctrl.petList = data;
+            console.warn(data);
+        })
+    }
+
     PetFinderService.getData();
+    ctrl.fillPetList();
 
 
 
-    ctrl.genderArray = [null, "male", "female"];
+    ctrl.genderArray = ["male", "female"];
     //data.animals[n].gender
-    ctrl.animalArray = [null, "dog", "cat"];
+    ctrl.animalArray = ["dog", "cat"];
     //data.animals[n].type
-    ctrl.ageArray = [null, "baby", "young", "adult"]
+    ctrl.ageArray = ["baby", "young", "adult"]
     // data.animals[n].age
     ctrl.house_trainedArray = [false, true];
     //data.animals[n].attributes.house_trained
@@ -20,9 +31,9 @@ function PetFinderController(PetFinderService) {
     //data.animals[n].attributes.spayed_neutered
     ctrl.special_needsArray = [false, true];
     //data.animals[n].attributes.special_needs
-    ctrl.coatArray = [null, "short","medium", "long", "curly", "wire"];
+    ctrl.coatArray = ["short","medium", "long", "curly", "wire"];
     //data.animals[n].coat
-    ctrl.sizeArray = [null, "small", "medium", "large"];
+    ctrl.sizeArray = ["small", "medium", "large"];
     //data.animals[n].size
 
     // link: data.animals[n].url

@@ -1,0 +1,94 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: lightseagreen;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+pet-search{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+    .search-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: space-between;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+    }
+        #search-header{
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        .search-category{
+            margin: 5px;
+        }
+
+        .selection-box{
+            padding: 3px;
+            background-color: antiquewhite;
+            text-align: center;
+            width: 150px;
+        }
+
+pet-display{
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+    #pet-list{
+        background-color: lightcyan;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    .list-item{
+        background-color: skyblue;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
