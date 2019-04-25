@@ -5,9 +5,8 @@ angular
   .component("petDisplay", {
       template:`
     <ul id="pet-list">
-      <li class="list-item" ng-repeat="pet in petList | filter: {{gender}} {{animalType}} {{age}} {{houseTrained}} {{shotsCurrent}} {{spayedNeutered}} {{specialNeeds}} {{coat}} {{size}}">
+      <li class="list-item" ng-repeat="pet in $ctrl.petList | petFilter ">
         <h1>{{pet.name}}</h1> <!--works-->
-        <a href="{{pet.url}}><h1>{{pet.name}}</h1></a> <!--Doesn't work-->
       </li>
     </ul> 
       `,
@@ -38,3 +37,9 @@ angular
 //   {{specialNeeds}}
 //   {{coat}}
 //   {{size}}
+
+// | filter: {{$ctrl.gender}} {{$ctrl.animalType}} {{$ctrl.age}} {{$ctrl.houseTrained}} {{$ctrl.shotsCurrent}} {{$ctrl.spayedNeutered}} {{$ctrl.specialNeeds}} {{$ctrl.coat}} {{$ctrl.size}}
+
+//<!--<a href="{{pet.url}}><h1>{{pet.name}}</h1></a>--> <!--Doesn't work-->
+
+// do a custom filter if you wanna

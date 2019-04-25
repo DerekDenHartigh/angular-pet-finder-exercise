@@ -26,6 +26,7 @@ function PetFinderService($http, $q) {
             .then( (token) => {
                 $http({
                     url: 'https://api.petfinder.com/v2/animals?type=dog',
+                    // url: 'https://api.petfinder.com/v2/types', // for more than dogs
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + token
